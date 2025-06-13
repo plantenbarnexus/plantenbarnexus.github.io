@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome voor sociale media iconen -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+	<div id="top"></div>
+    <header>
+		<div class="logo-container">
+        <img src="images/logo.jpg" alt="Nexus logo">
+        <h1> NEXUS </h1>
+    </div>
+    </header>
+        
+    
+
+    <nav>
+		<a href="#top">Home</a>
+        <a href="#about">Over ons</a>
+        <a href="#hours">Openingsuren</a>
+		<a href="#gallery">Sfeerbeelden</a>
+		<a href="#map">Locatie</a>
+        <a href="menukaart.html">Menukaart</a>
+    </nav>
+
+    <section id="about">
+    <h2>Over ons</h2>
+    <p><strong>🌿 Nexus – Waar Groen & Gezelligheid Samenkomen! 🍹</strong></p>
+
+    <p>
+        Welkom bij <strong>Nexus</strong>, dé hotspot in Oudenaarde voor plantenliefhebbers en fijnproevers! 🌱✨ </p> 
+       <p> Ontdek een oase van groen terwijl je geniet van een heerlijk ambachtelijk bier, een verfijnde cocktail of een verfrissende mocktail.
+    </p>
+
+    <div class="about-highlights">
+        <h3>🪴 Wat vind je bij ons?</h3>
+        <ul>
+            <li>🌿 Unieke en bijzondere kamerplanten voor jouw urban jungle</li>
+            <li>🍺 Een zorgvuldig geselecteerd aanbod van speciaalbieren</li>
+            <li>🍹 Heerlijke cocktails en mocktails, perfect voor elk moment</li>
+        </ul>
+    </div>
+
+    <p>
+        Kom langs in de <strong>Hoogstraat 61/63 te Oudenaarde</strong> en laat je verrassen door de combinatie van natuur en horeca! 🌱🍸
+    </p>
+</section>
+
+
+    <section id="hours">
+        <h2>⌚ Openingsuren</h2>
+        <ul>
+            <li>Maandag & Dinsdag: Gesloten</li>
+            <li>Woensdag - Donderdag: 12:00 - 18:30</li>
+            <li>Vrijdag - Zondag: 12:00 - 22:00</li>
+        </ul>
+    </section>
+
+
+	<section id="gallery" class="content-section">
+  <h2>📸 Sfeerbeelden</h2>
+  <div class="photo-gallery">
+    	<img src="images/foto1.jpg" alt="Sfeerbeeld 1">
+    	<img src="images/foto2.jpeg" alt="Sfeerbeeld 2">
+    	<img src="images/foto3.jpg" alt="Sfeerbeeld 3">
+		<img src="images/foto4.jpg" alt="Sfeerbeeld 4">
+		<img src="images/foto5.jpg" alt="Sfeerbeeld 5">
+		<img src="images/foto6.jpg" alt="Sfeerbeeld 6">
+		<img src="images/foto7.jpeg" alt="Sfeerbeeld 7">
+		<img src="images/foto8.jpg" alt="Sfeerbeeld 8">
+		<img src="images/foto9.jpg" alt="Sfeerbeeld 9">
+  </div>
+</section>
+    
+<section id="map">
+    <h2>📍 Onze locatie</h2>
+    <div class="map-container">
+        <iframe title='maps'
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.336678816596!2d3.6000963157441294!3d50.84607986678111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c37e1eb7de8d13%3A0x40237fcbf3c18e0!2sHoogstraat%2063%2C%209700%20Oudenaarde!5e0!3m2!1snl!2sbe!4v1715000000000"
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+
+
+<footer>
+    <p>&copy; 2025  Nexus - Oudenaarde</p>
+    <div class="social-media">
+			<img src="images/logo.jpg" alt="Nexus logo" class="footer-logo">
+			<a href="https://facebook.com/people/NeXus-9700/61573092377465" class="social-icon facebook" target="_blank" aria-label="Facebook">
+			<i class="fab fa-facebook-f"></i>
+			</a>
+        <a href="https://www.instagram.com/plantenbar.nexus" class="social-icon instagram" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+		</a>
+        <a href="mailto:plantenbarnexus@gmail.com" class="social-icon gmail" aria-label="E-mail">
+        <i class="fas fa-envelope"></i>
+		</a>    
+    </div>
+</footer>
+
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" src="#" id="lightbox-img">
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const images = Array.from(document.querySelectorAll('.photo-gallery img'));
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.close');
+    let currentIndex = 0;
+
+    function showImage() {
+        lightboxImg.src = images[currentIndex].src;
+    }
+
+    images.forEach((img, index) => {
+        img.addEventListener('click', () => {
+            currentIndex = index;
+            showImage();
+            lightbox.classList.add('show');
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        lightbox.classList.remove('show');
+    });
+
+    // Sluiten bij klik op overlay
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('show')) return;
+
+        if (e.key === 'ArrowRight') {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage();
+        } else if (e.key === 'ArrowLeft') {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage();
+        } else if (e.key === 'Escape') {
+            lightbox.classList.remove('show');
+        }
+    });
+});
+</script>
+
+
+
+
+</body>
+</html>
