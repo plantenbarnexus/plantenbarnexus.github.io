@@ -174,7 +174,7 @@ section ul li {
 
 .photo-gallery img {
   width: 100%;
-  height: 400px; /* vaste hoogte voor gelijke grootte */
+  height: 300px; /* vaste hoogte voor gelijke grootte */
   object-fit: cover; /* zorgt dat het beeld mooi wordt bijgesneden */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -302,3 +302,4 @@ section ul li {
         grid-template-columns: 1fr;
     }
 }
+
